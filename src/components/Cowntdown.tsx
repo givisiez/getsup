@@ -1,17 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import { ChallengesContext } from '../contexts/ChallengesContext';
 import styles from '../styles/components/Countdown.module.css';
-
-/**
-* Important information is highlighted
-* ! Deprecated method, do no t use
-* ? Should this method be exposed is the plublic API
-* TODO: refacator this merhod so that it onforms the API
-* @param myParam The parameter for this method
-*/
 
 let countdownTimeout: NodeJS.Timeout;
 
 export function Countdown() {
+    const { startNewChallenge } = useContext(ChallengesContext);
+
     const [time, setTime] = useState(0.1 * 60);
     const [isActive, setIsActive] = useState(false);
     const [hasFinished, setHasFinished] = useState(false);
@@ -29,7 +24,7 @@ export function Countdown() {
     function resetCountdown() {
         clearTimeout(countdownTimeout)
         setIsActive(false);
-        setTime(25*60);
+        setTime(0.1*60);
     }   
 
     useEffect(() => {
@@ -38,9 +33,9 @@ export function Countdown() {
                 setTime(time - 1);
             }, 1000)
         } else if (isActive && time === 0) {
-            // console.log('finalizou');
             setHasFinished(true);
             setIsActive(false);
+            startNewChallenge();
         }
     }, [isActive, time]);
 
