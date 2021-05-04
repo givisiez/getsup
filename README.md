@@ -5,9 +5,9 @@ O objetivo é estimular os DEVs a criar uma rotina de exercício físico e menta
 
 ![Print sreen](https://github.com/givisiez/getsup/blob/main/public/images/template.png?raw=true)
 
-![Print sreen](https://github.com/givisiez/ecoleta/blob/main/app/public/images/layout-new.png?raw=true)
+![Print sreen](https://github.com/givisiez/getsup/blob/main/app/public/images/layout-new.png?raw=true)
 
-![Print sreen](https://github.com/givisiez/ecoleta/blob/main/app/public/images/layout-conclusao.png?raw=true)
+![Print sreen](https://github.com/givisiez/getsup/blob/main/app/public/images/layout-conclusao.png?raw=true)
 
 <h2 style="font-weight:300">🌐 Deploy:</h2>
 <a href="https://getsup.vercel.app/">
